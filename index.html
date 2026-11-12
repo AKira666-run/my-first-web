@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个网页</title>
+</head>
+<body>
+    <!-- 给标题加上红色的文字样式 -->
+<h1 style="color: red;">你好，我是 Sun！</h1>
+
+    <p>脚踏实地。</p >
+    <img src="https://picsum.photos/300/200" alt="随机风景图片">
+    <p>去看看 GitHub 网站了解更多。</p >
+</body><h3>今日学习步骤</h3>
+<ol>
+    <li>打开 VS Code</li>
+    <li>编写列表代码</li>
+    <li>保存并在浏览器中刷新</li>
+</ol>
+<h3>我的每周学习计划表</h3>
+<table border="1">
+    <!-- 第一行：表头 -->
+    <tr>
+        <th>时间</th>
+        <th>任务</th>
+        <th>完成状态</th>
+    </tr>
+    <!-- 第二行：具体内容 -->
+    <tr>
+        <td>周一</td>
+        <td>HTML 基础骨架</td>
+        <td>已完成</td>
+    </tr>
+    <!-- 第三行：具体内容 -->
+    <tr>
+        <td>周二</td>
+        <td>列表与结构化文本</td>
+        <td>已完成</td>
+    </tr>
+    <!-- 第四行：具体内容 -->
+    <tr>
+        <td>周三</td>
+        <td>表格与数据呈现</td>
+        <td>进行中</td>
+    </tr>
+</table>
+<h3>今日学习心得反馈</h3>
+<form onsubmit="showRecord(event)">
+    <!-- 给输入框起个名字 id="userName"，方便后面找到它 -->
+    <p>你的名字：<input type="text" id="userName" placeholder="请输入你的姓名" required></p >
+    
+    <p>
+        今日打卡任务：
+        <input type="checkbox" id="task1"> <label for="task1">敲完表格代码</label>
+        <input type="checkbox" id="task2"> <label for="task2">体验网页交互</label>
+    </p >
+    
+    <button type="submit">提交打卡</button>
+</form>
+
+<!-- 用来展示打卡结果的区域 -->
+<p id="result" style="color: rgb(128, 0, 0); font-weight: bold;"></p >
+
+<!-- JavaScript 交互脚本 -->
+<script>
+    function showRecord(event) {
+        event.preventDefault(); // 阻止页面默认刷新
+        let name = document.getElementById("userName").value; // 获取你输入的名字
+        document.getElementById("result").innerText = "🎉 恭喜 " + name + "，今日学习打卡成功！"; // 显示在网页上
+    }
+</script>
+
+</html>
